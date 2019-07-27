@@ -1,0 +1,144 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">
+    <text class="appname" style="display:block;">极简天气</text>
+    <view class="table">
+      <image mode="aspectFit" style='width:180rpx;;height:50rpx;' src="/images/before.png" bindtap='before_tap'></image>
+
+      <image mode="aspectFit" style='width:350rpx;height:50rpx;' src="/images/home.png" catchtap='home_tap'></image>
+
+      <image mode="aspectFit" style='width:180rpx;height:50rpx;' src="/images/next.png" catchtap='next_tap'></image>
+    </view>
+  </view>
+
+  <swiper duration="100" class='switer-box' indicator-dots="true" indicator-color="gray" indicator-active-color="white">
+
+    <swiper-item class="page-container">
+      <view class="top">
+        <view id="row1" bindtap='fresh'>
+          <view id="row1_1">{{weather.tem1}}-{{weather.tem2}}</view>
+          <image id="row1_2" mode="aspectFit" animation="{{animation}}" src="/images/refresh.png" style="width:40rpx;height:40rpx"></image>
+        </view>
+
+        <view id="row2">
+          <image wx:if="{{url_today == undefine? false:true}}" mode="aspectFit" src="{{url_today}}" style="width:250rpx;height:250rpx;"></image>
+          <!--src="{{url_today}}"///////"{{'cloud://books-info-mqg58.626f-books-info-mqg58/'+item.picPaths[0]}}"-->
+          <view style='text-align:center;color:white;'>{{weather.wea}}</view>
+        </view>
+
+        <view id="row3" style="flex-direction:row;">
+          <view id="row3_1">{{weather.tem}}℃</view>
+          <view id="row3_2">
+            <view id="txt1">
+              <image src="/images/position.png" style="width:50rpx;height:50rpx;" mode="aspectFit"></image>
+              {{weather.city}}
+            </view>
+            <text id="txt2">{{weather.week}}</text>
+          </view>
+        </view>
+      </view>
+      
+      <view class="bottom" style="flex-direction:row;">
+        <view class="bottom_item">
+          <view class="info1">{{weatherweek.data[1]['day']}}</view>
+          <image wx:if="{{url_1 == undefine? false:true}}" class="pic_b" mode="aspectFit" src="{{url_1}}"></image>
+          <view class="info2">{{weatherweek.data[1]['wea']}}</view>
+          <view class="info3">
+            {{weatherweek.data[1]['tem1']}}-{{weatherweek.data[1]['tem2']}}
+          </view>
+        </view>
+
+        <view class="bottom_item">
+          <view class="info1">{{weatherweek.data[2]['day']}}</view>
+          <image  wx:if="{{url_2 == undefine? false:true}}" class="pic_b" mode="aspectFit" src="{{url_2}}"> </image>
+          <view class="info2">{{weatherweek.data[2]['wea']}}</view>
+          <view class="info3">
+            {{weatherweek.data[2]['tem1']}}-{{weatherweek.data[2]['tem2']}}
+          </view>
+        </view>
+        <view class="bottom_item">
+          <view class="info1">{{weatherweek.data[3]['day']}}</view>
+          <image wx:if="{{url_3 == undefine? false:true}}" class="pic_b"mode="aspectFit" src="{{url_3}}"></image>
+          <view class="info2">{{weatherweek.data[3]['wea']}}</view>
+          <view class="info3">
+            {{weatherweek.data[3]['tem1']}}-{{weatherweek.data[3]['tem2']}}
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+
+    <swiper-item class="page-container page-container-two">
+      <view class="section row-detail">
+      
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/air.png"></image>
+          </view>
+          <view class="detail-text">空气质量:{{weather.air_level}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/pm25.png"></image>
+          </view>
+          <view class="detail-text">PM2.5:{{weather.air_pm25}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic adjust again_adjust" src="/images/air_level.png"></image>
+          </view>
+          <view class="detail-text">质量指数:{{weather.air}}</view>
+        </view>
+
+      </view>
+
+      <view class="section row-detail">
+
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/tem.png"></image>
+          </view>
+          <view class="detail-text">温度：{{weather.tem}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/humidity.png"></image>
+          </view>
+          <view class="detail-text">湿度：{{weather.humidity}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/pressure.png"></image>
+          </view>
+          <view class="detail-text">压强：{{weather.pressure}}</view>
+        </view>
+
+      </view>
+
+      <view class="section row-detail">
+
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic adjust" src="/images/win.png"></image>
+          </view>
+          <view class="detail-text">{{weather.win}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic" src="/images/win_speed.png"></image>
+          </view>
+          <view class="detail-text">风级：{{weather.win_speed
+}}</view>
+        </view>
+        <view class="column-detail">
+          <view class="detail-pic-view">
+            <image mode="aspectFit" class="detail-pic adjust" src="/images/win_meter.png"></image>
+          </view>
+          <view class="detail-text">{{weather.win_meter}}</view>
+        </view>
+
+      </view>
+
+    </swiper-item>
+  </swiper>
+
+</view>

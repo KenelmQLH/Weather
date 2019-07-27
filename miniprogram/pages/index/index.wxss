@@ -1,0 +1,265 @@
+/**index.wxss**/
+.title{
+  position:absolute;
+  top:0;
+
+  width:100%;
+  height:10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appname{
+  height:5vh;
+  text-align:center;
+  color:white;
+  font-size:28rpx;
+  line-height:5vh;
+}
+
+.table{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin:10rpx;
+}
+.table-title{
+  display: inline-block;
+  height:5vh;
+  line-height: 5vh;
+
+  font-size: 28rpx;
+  color: white;
+}
+
+
+.switer-box{
+  position: absolute;
+  bottom: 0;
+  /*white-space: nowrap; 控制不换行
+  position: absolute;
+  top:10vh;*/
+
+  height: 90vh;
+  width:100%;
+
+  margin: 0; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-container{
+  box-sizing: border-box;
+  width:750rpx;
+  height: 100%;
+  padding: 25rpx;
+  margin: 0; 
+  
+
+  display: inline-flex; /*???????????????????????*/
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+}
+.page-container-two{
+  justify-content: center;
+}
+.top{
+  position: relative;
+  left:0px; /*给子组件定位用*/
+  width:88%;
+  height:57%;
+  background: -webkit-linear-gradient(top,#50c3e9,#286cf5,#031fff);
+  margin:0;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  
+  padding:0;
+  /*flex-direction: column;*/
+  /*align-items: center;
+  justify-content: center;*/
+}
+
+#row1{
+  width:100%;
+  position: relative;
+  left:0;
+  flex-direction: row;
+}
+#row1_1{
+  position:absolute;
+  top:20rpx;
+  left:20rpx;
+  color: white;
+}
+#row1_2{
+  position:absolute;
+  top:20rpx;
+  right:40rpx;
+}
+#row2{
+  margin: 50rpx auto;
+  width:375rpx;
+  height: 375rpx;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;/*纳尼，我只要水平居中都要些上垂直居中才行？只能注意用父容器控制一下*/
+}
+#row3_1{
+  position:absolute;
+  left:20rpx;
+  bottom:20rpx;
+  padding: 0;
+  color: white;
+  font-size:100rpx;
+  width:300rpx;
+}
+
+#row3_2{
+  position:absolute;
+  right:20rpx;
+  bottom:20rpx;
+  padding:10rpx;
+  width:200rpx;
+
+  flex-direction:column;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+#txt1{
+  color: white;
+  font:20px;
+}
+#txt2{
+  color: white;
+  font:20px;
+}
+
+
+.bottom{
+  background-color:white; 
+  height:40%;
+  width:88%;
+  padding: 0;
+  margin:0; 
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  border-bottom-left-radius:40rpx; 
+  border-bottom-right-radius:40rpx; 
+}
+
+.bottom_item{
+  height:100%;
+  width:33%;
+  border-right:2rpx #bfd0db solid;
+  padding: 0;
+  margin: 0;
+
+  color:#bfd0db;
+  text-align: center;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_item:last-child {
+    border-right: none;
+}
+.info1{
+  width: 200rpx;
+  font-size: 34rpx;
+  height: 10%;
+  line-height: 100%;
+}
+.pic_b{
+  width: 140rpx; 
+  height:60%;
+}
+.info2{
+  width: 200rpx;
+  font-size: 34rpx;
+  height: 10%;
+  line-height: 100%;
+  margin-bottom:4px; 
+}
+.info3{
+  
+  width: 200rpx;
+  font-size: 32rpx;
+  height: 10%;
+  line-height: 100%;
+}
+
+.section{
+  width:90%;
+  height:24vh;
+  margin:20rpx 0rpx 20rpx 0rpx;
+  border-radius: 30rpx;
+  background-color:white;
+  box-sizing: border-box;
+}
+.row-detail{
+  height:24vh;
+  box-sizing: border-box;
+  padding: 10rpx 30rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.column-detail{
+  width:30%;
+  height:100%;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-pic-view{
+  width:100%;
+  height: 20vh;
+  margin-top: 20rpx;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+}
+.detail-pic{
+  display: block;
+  width:140rpx;
+  height: 140rpx;
+  margin:auto;
+}
+.adjust{
+  width:130rpx;
+  height: 130rpx;
+}
+.again_adjust{
+  width:110rpx;
+  height: 110rpx;
+}
+.detail-text{
+  height:50rpx;
+  line-height: 50rpx;
+  font-size:28rpx;
+  color: gray;
+  margin-top:12rpx;
+  margin-bottom: 8rpx;
+}
