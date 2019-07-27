@@ -7,16 +7,10 @@
 * “删除城市”，采用批量选中删除的方式。
 * "添加城市"，主要功能页在libs/citySelector中，本项目在137行 bindCounty函数中加入了保存数据的操作，对提示信息、常用城市的样式也稍作了修改。
 
-![avatar](https://github.com/KenelmQLH/Weather/tree/master/other/Screenshot_20190708_121532_com.tencent.mm.jpg)
-![avatar](https://github.com/KenelmQLH/Weather/tree/master/other/Screenshot_20190711_182340_com.tencent.mm.jpg)
-![avatar](https://github.com/KenelmQLH/Weather/tree/master/other/Screenshot_20190712_205910_com.tencent.mm.jpg)
-![avatar](https://github.com/KenelmQLH/Weather/tree/master/other/Screenshot_20190712_205919_com.tencent.mm.jpg)
-![avatar](https://github.com/KenelmQLH/Weather/tree/master/other/Screenshot_20190712_205942_com.tencent.mm.jpg)
-
 
 ## 参考文档
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
-- [码云](https://gitee.com/qfr_bz/citySelector)
+- [码云-qfr_bz](https://gitee.com/qfr_bz/citySelector)
 
