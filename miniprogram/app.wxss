@@ -1,0 +1,26 @@
+/**app.wxss**/
+page{height:100%}
+
+.container {
+  height: 100vh;
+  width:100vw;
+  background-color:rgb(37, 2, 48); 
+  margin: 0 0; 
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*
+  
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562426472919&di=4f4a746e42c80924adf10b3388152679&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201508%2F27%2F20150827194454_rz4Bt.jpeg');
+  background-repeat:repeat-x; 
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+  */
+} 

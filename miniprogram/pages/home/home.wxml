@@ -1,0 +1,66 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="title">
+    <text class="appname" style="display:block;">极简天气</text>
+    <view class="table">
+      <view class="left">
+        <image mode="aspectFit" class="left-pic" src="../../images/city.png" catchtap='add_tap'></image>
+        <view class='left-txt'>我的城市</view>
+      </view>
+
+      <image mode="aspectFit" class="right" src="../../images/delete_red.png" catchtap='delete_tap'></image>
+    </view>
+  </view>
+
+  <view class="city city-adjust" data-id="{{local_city_info.city}}" data-indx="{{page0}}" catchtap='jump_city'>
+    <view class="city-name">
+      {{local_city_info.city}}
+    </view>
+    <view class="wea-img">
+        <image wx:if="{{local_city_info.wea_img == undefine? false:true}}" mode="aspectFit" style='width:80rpx;height:80rpx;' src="{{'../../images/'+local_city_info.wea_img + '_w.png'}}"></image>
+    </view>
+    <view class="wea-temp">
+      <view class='tem1'>
+        {{local_city_info.tem1}}°
+      </view>
+      <view class='tem2'>
+        {{local_city_info.tem2}}
+      </view>
+    </view>
+   </view>
+
+  <scroll-view class="scroll-container" scroll-y="true" enable-flex="true">
+    
+    <block wx:for="{{citys_info}}" wx:key="cityid" wx:for-index="index">
+      
+      <view class="city" data-id="{{item.city}}" data-indx="{{index+1}}" catchtap='jump_city'>
+        <view class="city-name">
+          {{item.city}}
+        </view>
+
+        <view class="wea-img">
+            <image mode="aspectFit" wx:if="{{item.wea_img == undefine? false:true}}" style='width:120rpx;height:120rpx;' src="{{'../../images/'+item.wea_img + '_w.png'}}"></image>
+        </view>
+
+        <view class="wea-temp">
+          <view class='tem1'>
+            {{item.tem1}}°
+          </view>
+          <view class='tem2'>
+            {{item.tem2}}
+          </view>
+        </view>
+
+        <view class='delete-box' data-indx="{{index}}" catchtap='choose_tap'>
+          <image class='delete-choose' wx:if="{{choose_del[index]}}" mode="aspectFit" src="../../images/choose.png"></image>
+        </view>
+      </view>
+    </block>
+
+  </scroll-view>
+
+  <view class="add-city" catchtap='add_tap'>
+     <image mode="aspectFit" style='width:60rpx;height:60rpx;' src="../../images/add.png"></image>
+  </view>
+</view>
+
