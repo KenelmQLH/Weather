@@ -6,7 +6,10 @@
 * 点击上方**主目录**可进入我的城市页面，并可“添加城市”、“删除城市”。
 * “删除城市”，采用批量选中删除的方式。
 * "添加城市"，主要功能页在libs/citySelector中，本项目在137行 bindCounty函数中加入了保存数据的操作，对提示信息、常用城市的样式也稍作了修改。
-
+## 项目展示
+![图片1（信息页1）](https://github.com/KenelmQLH/Weather/raw/master/Pic/pic1.png)
+![图片1（信息页2）](https://github.com/KenelmQLH/Weather/raw/master/Pic/pic2.png)
+![图片1（编辑页）](https://github.com/KenelmQLH/Weather/raw/master/Pic/pic3.png)
 
 ## 参考文档
 
